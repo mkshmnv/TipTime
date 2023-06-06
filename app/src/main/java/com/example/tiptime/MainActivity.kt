@@ -15,10 +15,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.calculateButton.setOnClickListener{ calculateTip() }
+
+
     }
 
     private fun calculateTip() {
-        val stringInTextField = binding.costOfService.text.toString()
+        val stringInTextField = binding.costOfServiceEditText.text.toString()
         val cost = stringInTextField.toDouble()
         val selectedId = binding.tipOptions.checkedRadioButtonId
         val tipPercentage = when (selectedId) {
